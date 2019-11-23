@@ -1,19 +1,19 @@
-const incButton = document.getElementById("increment");
-const decButton = document.getElementById("decrement");
-const counterTag = document.getElementById("counter");
+const incButton: HTMLElement = document.getElementById("increment");
+const decButton: HTMLElement = document.getElementById("decrement");
+const counterTag: HTMLElement = document.getElementById("counter");
 
-let count = 0;
+let count: number = 0;
 
-const increment = value => {
+const increment = (value: number): void => {
   value += 1;
   count = value;
-  counterTag.textContent = value;
+  counterTag.textContent = value.toString();
 };
 
-const decrement = value => {
+const decrement = (value: number): void => {
   value -= 1;
   count = value;
-  counterTag.textContent = value;
+  counterTag.textContent = value.toString();
 };
 
 incButton.addEventListener("click", () => increment(count));
